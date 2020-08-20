@@ -11,7 +11,7 @@ module.exports = (app) => {
       description: "$5 for five Emaily credits",
       source: req.body.id,
     });
-    req.users.credits += 5;
+    req.user.credits += 5;
     const user = await req.user.save();
     res.send(user);
   });
